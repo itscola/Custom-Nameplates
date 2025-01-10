@@ -22,11 +22,11 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: List files in /build
-        run: ls -la /build
+      - name: List files in build
+        run: ls -la build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: /build/target/*.jar  # Update this path as needed
+          path: build/target/*.jar  # Update this path as needed
